@@ -14,18 +14,29 @@ Projekt powstał jako zaliczenie przedmiotu, zrealizowany w oparciu o **Supabase
 
 ---
 
+## Zrzuty ekranu
+
+<p align="center">
+  <img src="Photos/2.png" width="22%" alt="Moje Książki" />
+  <img src="Photos/3.png" width="22%" alt="Statystyki" />
+  <img src="Photos/1.png" width="22%" alt="Obserwowani" />
+  <img src="Photos/4.png" width="22%" alt="Profil" />
+</p>
+
+<p align="center">
+  <sub>Od lewej: Moje Książki &nbsp;·&nbsp; Statystyki &nbsp;·&nbsp; Obserwowani &nbsp;·&nbsp; Profil</sub>
+</p>
+
+---
+
 ## Ekrany
 
-| Ekran | Opis |
-|---|---|
-| **Login** | Logowanie przy użyciu e-maila i hasła |
-| **Rejestracja** | Tworzenie nowego konta z nazwą użytkownika |
-| **Moje Książki** | Główna lista książek z filtrowaniem, wyszukiwaniem i licznikiem |
-| **Szczegóły książki** | Podgląd i edycja wpisu, sekcja innych czytelników |
-| **Dodaj książkę** | Formularz dodawania nowej pozycji do biblioteki |
-| **Statystyki** | Przegląd danych o aktywności czytelniczej |
-| **Obserwowani** | Lista obserwowanych użytkowników i ich przeczytane książki |
-| **Profil** | Dane konta i wylogowanie |
+| Ekran | Podgląd | Opis |
+|---|---|---|
+| **Moje Książki** | <img src="Photos/2.png" width="120"/> | Główna lista książek z filtrowaniem po statusie, wyszukiwarką i licznikiem przeczytanych w danym roku |
+| **Statystyki** | <img src="Photos/3.png" width="120"/> | Przegląd aktywności czytelniczej — liczniki, średnia ocena i najwyżej oceniona książka |
+| **Obserwowani** | <img src="Photos/1.png" width="120"/> | Lista obserwowanych czytelników i podgląd ich przeczytanych tytułów |
+| **Profil** | <img src="Photos/4.png" width="120"/> | Dane konta, podsumowanie aktywności i wylogowanie |
 
 ---
 
@@ -123,8 +134,13 @@ BookDiary/
 │   │   └── useStore.ts      # Globalny store (Zustand)
 │   ├── screens/             # Logika i widoki poszczególnych ekranów
 │   └── components/          # Komponenty wielokrotnego użytku
-├── supabase_schema.sql       # Schemat SQL do uruchomienia w Supabase
-├── app.json                  # Konfiguracja Expo
+├── Photos/                  # Zrzuty ekranu
+│   ├── 1.png
+│   ├── 2.png
+│   ├── 3.png
+│   └── 4.png
+├── supabase_schema.sql      # Schemat SQL do uruchomienia w Supabase
+├── app.json                 # Konfiguracja Expo
 └── README.md
 ```
 

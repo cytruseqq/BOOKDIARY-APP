@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "BookDiary",
+    "slug": "bookdiary",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bookdiary.app"
+    },
+    "android": {
+      "package": "com.bookdiary.app"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "scheme": "bookdiary",
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
