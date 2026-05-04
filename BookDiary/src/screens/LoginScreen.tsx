@@ -14,10 +14,12 @@ import {
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { supabase } from '../lib/supabase';
+import { useStore } from '../store/useStore';
 import { Colors } from '../lib/constants';
 
 export default function LoginScreen() {
   const router = useRouter();
+  const { setCurrentUser } = useStore();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -29,9 +31,18 @@ export default function LoginScreen() {
       return;
     }
     setLoading(true);
-    const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+    const { data, error } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
     setLoading(false);
-    if (error) Alert.alert('Błąd logowania', error.message);
+    
+    if (error) {
+      Alert.alert('Błąd logowania', error.message);
+      return;
+    }
+
+    if (data?.user) {
+      setCurrentUser(data.user);
+      router.push('/(tabs)/my-books');
+    }
   };
 
   return (
